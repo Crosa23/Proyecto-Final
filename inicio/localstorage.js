@@ -35,3 +35,12 @@ const enviar = () => {
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
 };
+
+
+const alert = document.querySelector('.alert')
+    const mostrar = () => {
+    alert.classList.add('mostrar')
+    setTimeout(()=>{
+        alert.classList.remove('mostrar')
+    }, 3000);
+    };

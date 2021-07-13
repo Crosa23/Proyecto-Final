@@ -26,7 +26,7 @@
   margin: 0;
 }
 
-/* ? SHOPPING CART */
+
 .shopping-cart-items {
   padding: 20px 0px;
 }
@@ -51,3 +51,14 @@
 .shopping-cart-total {
   min-height: 96px;
 }
+
+.cartel {
+  display: none;
+}
+.cartel.mostrar {
+  display: block;
+}
+
+.alert {
+  display: none;
+};
