@@ -19,7 +19,7 @@ function agregarAlCarritoClick(event) {
   const itemImage = item.querySelector('.item-image').src;
 
   agregarItemAlCarrito(itemTitle, itemPrice, itemImage);
-}
+};
 
 function agregarItemAlCarrito(itemTitle, itemPrice, itemImage) {
   const elementosTitulo = shoppingItemsContenedor.getElementsByClassName(
@@ -36,8 +36,8 @@ function agregarItemAlCarrito(itemTitle, itemPrice, itemImage) {
       $('.toast').toast('show');
       updateShoppingCartTotal();
       return;
-    }
-  }
+    };
+  };
 
   const filaCarritoCompras = document.createElement('div');
   const shoppingCarritoContenido = `
@@ -74,7 +74,7 @@ function agregarItemAlCarrito(itemTitle, itemPrice, itemImage) {
     .addEventListener('change', quantityChanged);
 
   actualizarCarritoCompras();
-}
+};
 
 function actualizarCarritoCompras() {
   let total = 0;
@@ -98,21 +98,21 @@ function actualizarCarritoCompras() {
     total = total + shoppingCarritoItemPrecio * shoppingCartItemQuantity;
   });
   shoppingCartTotal.innerHTML = `$ ${total.toFixed(2)}`;
-}
+};
 
 function borrarShoppingCarritoItem(event) {
   const buttonClicked = event.target;
   buttonClicked.closest('.shoppingCartItem').remove();
   actualizarCarritoCompras();
-}
+};
 
 function quantityChanged(event) {
   const input = event.target;
   input.value <= 0 ? (input.value = 1) : null;
   actualizarCarritoCompras();
-}
+};
 
 function comprarBotonClick() {
   shoppingItemsContenedor.innerHTML = '';
   actualizarCarritoCompras();
-}
+};
