@@ -12,7 +12,7 @@ const ingresar = () => {
         mensajeValidacion.innerHTML=`Bienvenido ${usuario}`;
 
         setTimeout(()=>{
-            window.location='./inicio/home.html';
+            window.location.replace('https://crosa23.github.io/Proyecto-Final/inicio/home.html');
         },3000);
 
     }else{
