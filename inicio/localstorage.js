@@ -36,10 +36,6 @@ const enviar = () => {
     datosFormulario.resetearFormulario();
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
-    alert.classList.add('mostrar')
-    setTimeout(()=>{
-        alert.classList.remove('mostrar')
-    }, 3000);
 };
 
 
