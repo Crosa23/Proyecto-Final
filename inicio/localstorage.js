@@ -10,7 +10,9 @@ class Formulario{
     resetearFormulario(){
         document.getElementById('formulario').reset();
     };
-}
+};
+
+const alert = document.querySelector('.alert')
 
 const enviar = () => {
     let nombreRegistro = document.querySelector("#nombreRegistro").value;
@@ -34,13 +36,11 @@ const enviar = () => {
     datosFormulario.resetearFormulario();
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
-};
 
-
-const alert = document.querySelector('.alert')
-    const mostrar = () => {
     alert.classList.add('mostrar')
     setTimeout(()=>{
         alert.classList.remove('mostrar')
     }, 3000);
-    };
+};
+
+
