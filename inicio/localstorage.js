@@ -34,4 +34,4 @@ const enviar = () => {
     datosFormulario.resetearFormulario();
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
-}
+};
