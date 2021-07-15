@@ -51,14 +51,3 @@
 .shopping-cart-total {
   min-height: 96px;
 }
-
-.cartel {
-  display: none;
-}
-.cartel.mostrar {
-  display: block;
-}
-
-.alert {
-  display: none;
-};
