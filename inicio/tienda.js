@@ -1,3 +1,5 @@
+let arrayCompra = [];
+
 const añadirCarritoCompras = document.querySelectorAll('.añadirCarro');
 añadirCarritoCompras.forEach((añadirCarritoBoton) => {
   añadirCarritoBoton.addEventListener('click', agregarAlCarritoClick);
@@ -21,6 +23,7 @@ function agregarAlCarritoClick(event) {
   agregarItemAlCarrito(itemTitle, itemPrice, itemImage);
 };
 
+
 function agregarItemAlCarrito(itemTitle, itemPrice, itemImage) {
   const elementosTitulo = shoppingItemsContenedor.getElementsByClassName(
     'shoppingCartItemTitle'
@@ -38,6 +41,12 @@ function agregarItemAlCarrito(itemTitle, itemPrice, itemImage) {
       return;
     };
   };
+  let objetoAuto = {
+    itemTitle,
+    itemPrice
+};
+arrayCompra.push(objetoAuto);
+localStorage.setItem ("arrayCompra",JSON.stringify(arrayCompra));
 
   const filaCarritoCompras = document.createElement('div');
   const shoppingCarritoContenido = `
