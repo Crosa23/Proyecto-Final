@@ -1,11 +1,12 @@
 class Formulario{
-    constructor(pNombre,pApellido,pDireccion,pCiudad,pPais,pCP){
+    constructor(pNombre,pApellido,pDireccion,pCiudad,pPais,pCP, pPedido){
         this.Nombre = pNombre;
         this.Apellido = pApellido;
         this.Direccion = pDireccion;
         this.Ciudad = pCiudad;
         this.Pais = pPais;
         this.CodigoPostal = pCP;
+        this.pedido = pPedido;  // Esta es la nueva propiedad
     };
     resetearFormulario(){
         document.getElementById('formulario').reset();
@@ -21,6 +22,7 @@ const enviar = () => {
     let ciudadRegistro = document.querySelector("#ciudadRegistro").value;
     let paisRegistro = document.querySelector("#paisRegistro").value;
     let cpRegistro = document.querySelector("#cpRegistro").value;
+    let arrayCompra = document.querySelector("").value;
 
     console.log(nombreRegistro);
     console.log(apellidoRegistro);
@@ -31,7 +33,7 @@ const enviar = () => {
     
     let claveStorage = nombreRegistro;
 
-    let datosFormulario = new Formulario(nombreRegistro,apellidoRegistro,direccionRegistro,ciudadRegistro,paisRegistro,cpRegistro);
+    let datosFormulario = new Formulario(nombreRegistro,apellidoRegistro,direccionRegistro,ciudadRegistro,paisRegistro,cpRegistro, arrayCompra);
     console.log(datosFormulario);
     datosFormulario.resetearFormulario();
 
