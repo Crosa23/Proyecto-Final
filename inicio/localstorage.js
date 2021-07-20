@@ -16,13 +16,12 @@ class Formulario{
 const alert = document.querySelector('.alert')
 
 const enviar = () => {
-    let nombreRegistro = document.querySelector("#nombreRegistro").value;
-    let apellidoRegistro = document.querySelector("#apellidoRegistro").value;
-    let direccionRegistro = document.querySelector("#direccionRegistro").value;
-    let ciudadRegistro = document.querySelector("#ciudadRegistro").value;
-    let paisRegistro = document.querySelector("#paisRegistro").value;
-    let cpRegistro = document.querySelector("#cpRegistro").value;
-    let arrayCompra = document.querySelector("").value;
+    let nombreRegistro = $("#nombreRegistro")[0].value;
+    let apellidoRegistro = $("#apellidoRegistro")[0].value;
+    let direccionRegistro = $("#direccionRegistro")[0].value;
+    let ciudadRegistro = $("#ciudadRegistro")[0].value;
+    let paisRegistro = $("#paisRegistro")[0].value;
+    let cpRegistro = $("#cpRegistro")[0].value;
 
     console.log(nombreRegistro);
     console.log(apellidoRegistro);
