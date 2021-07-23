@@ -24,17 +24,17 @@ $("#formulario").on("submit", function(event){
     $(this).serializeArray().forEach(obj => formdata[obj.name] = obj.value);
 
     localStorage.setItem(formdata.nombre,JSON.stringify(new Formulario(formdata)));
-  });
+});
+
 /*
-const enviar = (evento) => {
-    evento.preventDefault()
+const enviar = () => {
     
-    let nombreRegistro = $("#nombreRegistro").val();
-    let apellidoRegistro = $("#apellidoRegistro").val();
-    let direccionRegistro = $("#direccionRegistro").val();
-    let ciudadRegistro = $("#ciudadRegistro").val();
-    let paisRegistro = $("#paisRegistro").val();
-    let cpRegistro = $("#cpRegistro").val();
+    let nombreRegistro = $("#nombreRegistro")[0].value;
+    let apellidoRegistro = $("#apellidoRegistro")[0].value;
+    let direccionRegistro = $("#direccionRegistro")[0].value;
+    let ciudadRegistro = $("#ciudadRegistro")[0].value;
+    let paisRegistro = $("#paisRegistro")[0].value;
+    let cpRegistro = $("#cpRegistro")[0].value;
 
     console.log(nombreRegistro);
     console.log(apellidoRegistro);
@@ -50,6 +50,5 @@ const enviar = (evento) => {
     datosFormulario.resetearFormulario();
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
-};*/
-
-
+};
+*/
