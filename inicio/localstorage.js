@@ -1,12 +1,12 @@
 class Formulario{
-    constructor(pNombre,pApellido,pDireccion,pCiudad,pPais,pCP, pPedido){
-        this.Nombre = pNombre;
-        this.Apellido = pApellido;
-        this.Direccion = pDireccion;
-        this.Ciudad = pCiudad;
-        this.Pais = pPais;
-        this.CodigoPostal = pCP;
-        this.pedido = pPedido;  // Esta es la nueva propiedad
+    constructor({nombre,apellido,direccion,ciudad,pais,codpost, pedido}){
+        this.Nombre = nombre;
+        this.Apellido = apellido;
+        this.Direccion = direccion;
+        this.Ciudad = ciudad;
+        this.Pais = pais;
+        this.CodigoPostal = codpost;
+        this.pedido = pedido;  // Esta es la nueva propiedad
     };
     resetearFormulario(){
         document.getElementById('formulario').reset();
@@ -15,13 +15,26 @@ class Formulario{
 
 const alert = document.querySelector('.alert')
 
-const enviar = () => {
-    let nombreRegistro = $("#nombreRegistro")[0].value;
-    let apellidoRegistro = $("#apellidoRegistro")[0].value;
-    let direccionRegistro = $("#direccionRegistro")[0].value;
-    let ciudadRegistro = $("#ciudadRegistro")[0].value;
-    let paisRegistro = $("#paisRegistro")[0].value;
-    let cpRegistro = $("#cpRegistro")[0].value;
+// Funcion de toma de datos del formulario version flexible no tenes harcodeados los valores que vas a recibir
+$("#formulario").on("submit", function(event){
+    event.preventDefault();
+
+    let formdata = {pedido: arrayCompra}
+
+    $(this).serializeArray().forEach(obj => formdata[obj.name] = obj.value);
+
+    localStorage.setItem(formdata.nombre,JSON.stringify(new Formulario(formdata)));
+  });
+/*
+const enviar = (evento) => {
+    evento.preventDefault()
+    
+    let nombreRegistro = $("#nombreRegistro").val();
+    let apellidoRegistro = $("#apellidoRegistro").val();
+    let direccionRegistro = $("#direccionRegistro").val();
+    let ciudadRegistro = $("#ciudadRegistro").val();
+    let paisRegistro = $("#paisRegistro").val();
+    let cpRegistro = $("#cpRegistro").val();
 
     console.log(nombreRegistro);
     console.log(apellidoRegistro);
@@ -37,6 +50,6 @@ const enviar = () => {
     datosFormulario.resetearFormulario();
 
     localStorage.setItem (claveStorage,JSON.stringify(datosFormulario));
-};
+};*/
 
 

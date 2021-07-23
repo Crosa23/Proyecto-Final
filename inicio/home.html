@@ -41,95 +41,7 @@
     </header>
     <section class="store">
         <div class="container">
-            <div class="items">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title" id="auto">Amarok Negra</h3>
-                            <img class="item-image" src="../img/amarok.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$4000000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Hilux Roja</h3>
-                            <img class="item-image" src="../img/hilux.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$6500000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Etios Crema</h3>
-                            <img class="item-image" src="../img/107.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$800000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Renegade Negra</h3>
-                            <img class="item-image" src="../img/jeep.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$6500000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">SW4 Blanca</h3>
-                            <img class="item-image" src="../img/s4.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$5999999</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Toro Blanca</h3>
-                            <img class="item-image" src="../img/Toro.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$3000000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Golf Blanco</h3>
-                            <img class="item-image" src="../img/golf.jpg">
-                            <div class="item-details">
-                                <h4 class="item-price">$5000000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="item shadow mb-4">
-                            <h3 class="item-title">Gol Blanco</h3>
-                            <img class="item-image" src="../img/gol.png">
-                            <div class="item-details">
-                                <h4 class="item-price">$850000</h4>
-                                <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="catologo" class="items">
             </div>
         </div>
     </section>
@@ -194,32 +106,32 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nombre</label>
-                                <input type="text" class="form-control" id="nombreRegistro" placeholder="Nombre" required>
+                                <input type="text" name="nombre" class="form-control" id="nombreRegistro" placeholder="Nombre" required>
                                 </div>
                                 <div class="form-group col-md-6">
                                 <label for="inputPassword4">Apellido</label>
-                                <input type="text" class="form-control" id="apellidoRegistro" placeholder="Apellido" required>
+                                <input type="text" class="form-control" name="apellido" id="apellidoRegistro" placeholder="Apellido" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Direccion</label>
-                                <input type="text" class="form-control" id="direccionRegistro" placeholder="Direccion" required>
+                                <input type="text" class="form-control" name="direccion" id="direccionRegistro" placeholder="Direccion" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                 <label for="inputCity">Ciudad</label>
-                                <input type="text" class="form-control" id="ciudadRegistro" required>
+                                <input type="text" class="form-control" name="ciudad" id="ciudadRegistro" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                 <label for="inputState">Pais</label>
-                                <input type="text" class="form-control" id="paisRegistro" required>
+                                <input type="text" class="form-control" name="pais" id="paisRegistro" required>
                                 </div>
                                 <div class="form-group col-md-2">
                                 <label for="inputZip">C.P</label>
-                                <input type="text" class="form-control" id="cpRegistro" required>
+                                <input type="text" class="form-control" name="codpost" id="cpRegistro" required>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="enviar()">Enviar</button>
+                            <button class="btn btn-primary" onclick="">Enviar</button>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -235,11 +147,12 @@
     </footer>
 
 
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./localstorage.js"></script>
+    <script src="./catalogo.js"></script>
     <script src="./tienda.js"></script>
 
 </body>
