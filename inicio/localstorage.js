@@ -24,6 +24,7 @@ $("#formulario").on("submit", function(event){
     $(this).serializeArray().forEach(obj => formdata[obj.name] = obj.value);
 
     localStorage.setItem(formdata.nombre,JSON.stringify(new Formulario(formdata)));
+    event.target.reset()
 });
 
 /*
