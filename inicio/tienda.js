@@ -1,4 +1,29 @@
 let arrayCompra = [];
+const mostrarCarrito = document.getElementById('mostrarCarrito');
+const ocultarCarrito = document.getElementById('OcultarCarrito');
+
+$('#mostrarCarrito').click(function(e){
+  btnMostrar(e);
+});
+
+$('#ocultarCarrito').click(function(e){
+  btnOcultar(e);
+});
+
+const btnMostrar = e => {
+  if (e.target.classList.contains('mostrarCarrito')) {
+  $('#carritoOcultar').show(2000);
+  
+  
+};
+}     
+
+const btnOcultar = e => {
+  if (e.target.classList.contains('ocultarCarrito')) {    
+  $('#carritoOcultar').hide(2000);
+  
+};
+}
 
 const añadirCarritoCompras = document.querySelectorAll('.añadirCarro');
 añadirCarritoCompras.forEach((añadirCarritoBoton) => {

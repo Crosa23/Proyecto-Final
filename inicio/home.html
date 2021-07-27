@@ -47,6 +47,7 @@
     </section>
     <section class="shopping-cart">
         <div class="container">
+            <div id="carritoOcultar">
             <h1 class="text-center" id="carrito">CARRITO</h1>
             <hr>
             <div class="row">
@@ -66,8 +67,10 @@
                     </div>
                 </div>
             </div>
+        
             <div class="shopping-cart-items shoppingItemsContenedor">
             </div>
+        </div>
             <div class="row">
                 <div class="col-12">
                     <div class="shopping-cart-total d-flex align-items-center">
@@ -85,6 +88,10 @@
                             <div class="toast-body text-white">
                                 Se aumentó correctamente la cantidad
                             </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark mostrarCarrito" id="mostrarCarrito">Mostrar Carrito</button>
+                            <button class="btn btn-dark ocultarCarrito" id="ocultarCarrito">Ocultar Carrito</button>
                         </div>
                         <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
                             data-target="#comprarModal">Comprar</button>
