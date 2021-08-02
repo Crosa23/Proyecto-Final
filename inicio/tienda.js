@@ -178,3 +178,10 @@ function comprarBotonClick() {
   shoppingItemsContenedor.innerHTML = '';
   actualizarCarritoCompras();
 };
+
+
+Swal.fire(
+  '¡FELICITACIONES!',
+  '¡Has Conseguido Tu Auto!',
+  'success'
+)
