@@ -2,6 +2,34 @@ let arrayCompra = [];
 const mostrarCarrito = document.getElementById('mostrarCarrito');
 const ocultarCarrito = document.getElementById('OcultarCarrito');
 
+
+
+const imprimoProductos = () => {
+  $.getJSON('./catalogo.json', function(autos){
+    $("#catalogo").html(
+      autos.map( (auto, index) => 
+      `${ (index%2 == 0)  ? '<div class="row">' : ""}  
+          <div class="col-12 col-md-6">
+              <div class="item shadow mb-4">
+                  <h3 class="item-title">${auto.nombre}</h3>
+                  <img class="item-image" src="${auto.img}">
+                  <div class="item-details">
+                      <h4 class="item-price">$${auto.precio}</h4>
+                      <button class="item-button btn btn-primary añadirCarro">AÑADIR AL CARRITO</button>
+                  </div>
+              </div>
+          </div>
+      ${ (index%2 != 0)  ? '</div>' : ""}`).join("")
+    )
+    const añadirCarritoCompras = document.querySelectorAll('.añadirCarro');
+    añadirCarritoCompras.forEach((añadirCarritoBoton) => {
+      añadirCarritoBoton.addEventListener('click', agregarAlCarritoClick);
+    });
+  })
+};
+
+$(document).ready(imprimoProductos())
+
 $('#mostrarCarrito').click(function(e){
   btnMostrar(e);
 });

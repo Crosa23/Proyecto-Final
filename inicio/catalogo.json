@@ -1,0 +1,50 @@
+[ 
+    { 
+        "id": 1,
+        "nombre": "Amarok Negra",
+        "img": "../img/amarok.jpg",
+        "precio": 4000000
+    },
+    {
+        "id": 2,
+        "nombre": "Hilux Roja",
+        "img": "../img/hilux.jpg",
+        "precio": 6500000
+    },
+    {
+        "id": 2,
+        "nombre": "Etios Crema",
+        "img": "../img/107.jpg",
+        "precio": 800000
+    },
+    {   
+        "id":2,
+        "nombre": "Renegade Negra",
+        "img": "../img/jeep.jpg",
+        "precio": 6500000
+    },
+    {
+        "id":3,
+        "nombre":"SW4 Blanca",
+        "img":"../img/s4.jpg",
+        "precio":5999999
+    },
+    {
+        "id":4,
+        "nombre":"Toro Blanca",
+        "img":"../img/Toro.jpg",
+        "precio":3000000
+    },
+    {
+        "id":5,
+        "nombre":"Golf Blanco",
+        "img":"../img/golf.jpg",
+        "precio":5000000
+    },
+    {
+        "id":6,
+        "nombre":"Gol Blanco",
+        "img":"../img/gol.png",
+        "precio":850000
+    }
+]
