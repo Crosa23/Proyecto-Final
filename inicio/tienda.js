@@ -179,9 +179,10 @@ function comprarBotonClick() {
   actualizarCarritoCompras();
 };
 
-
+function Compra(){ 
 Swal.fire(
   '¡FELICITACIONES!',
   '¡Has Conseguido Tu Auto!',
   'success'
 )
+};
